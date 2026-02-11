@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact — Yusufjon Kumakov</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <strong>Yusufjon Kumakov</strong>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="publication.html">Publication</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Contact</h1>
+    <p class="subtitle">Feel free to reach out</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Email</h2>
+    <p>yk4017@hw.ac.uk</p>
+  </section>
+
+  <section class="card">
+    <h2>Links</h2>
+    <ul>
+      <li>GitHub: github.com/yusufjonkumakov</li>
+      <li>LinkedIn: linkedin.com/in/yusufjon-kumakov-a59a19194</li>
+      <li>Google Scholar: scholar.google.com/citations?user=XvHKT-oAAAAJ</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>© 2026 Yusufjon Kumakov</footer>
+
+</body>
+</html>
