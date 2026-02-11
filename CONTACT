@@ -12,8 +12,8 @@
     <strong>Yusufjon Kumakov</strong>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
       <a href="publication.html">Publication</a>
+      <a href="projects.html">Projects</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </div>
@@ -22,7 +22,7 @@
 <section class="hero">
   <div class="hero-inner">
     <h1>Contact</h1>
-    <p class="subtitle">Get in touch with me</p>
+    <p class="subtitle">Feel free to reach out</p>
   </div>
 </section>
 
