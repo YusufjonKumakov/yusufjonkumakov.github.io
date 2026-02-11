@@ -18,7 +18,7 @@ body{
   line-height: 1.7;
 }
 
-/* --- NAVBAR --- */
+/* NAVIGATION */
 .site-header{
   background: var(--panel);
   border-bottom: 1px solid var(--border);
@@ -26,7 +26,6 @@ body{
   top:0;
   z-index:100;
 }
-
 .wrap{
   max-width:1100px;
   margin:auto;
@@ -36,12 +35,10 @@ body{
   justify-content:space-between;
   height:70px;
 }
-
 .nav{
   display:flex;
   gap:28px;
 }
-
 .nav a{
   text-decoration:none;
   text-transform:uppercase;
@@ -51,15 +48,12 @@ body{
   padding:6px 0;
   position:relative;
 }
-
 .nav a:hover{
   color:#444;
 }
-
 .nav a.active{
   color:#DAA520;
 }
-
 .nav a.active::after{
   content:"";
   position:absolute;
@@ -71,35 +65,23 @@ body{
   border-radius:1px;
 }
 
-/* --- HERO SECTION --- */
+/* HERO */
 .hero{
   background:linear-gradient(180deg, rgba(33,81,216,0.1), transparent);
   border-bottom:1px solid var(--border);
   padding:40px 20px;
 }
-
 .hero-inner{
   max-width:1100px;
   margin:auto;
 }
 
-.hero h1{
-  margin:0;
-  font-size:2rem;
-}
-
-.subtitle{
-  color:var(--muted);
-  margin-top:4px;
-}
-
-/* --- CONTENT --- */
+/* LAYOUT */
 .container{
   max-width:1100px;
   margin:30px auto;
   padding:0 20px;
 }
-
 .card{
   background:var(--panel);
   border:1px solid var(--border);
@@ -107,13 +89,13 @@ body{
   padding:22px;
   margin-bottom:20px;
 }
-
 h2{
   margin-top:0;
   color:var(--brand);
 }
-
-/* --- FOOTER --- */
+ul{
+  margin:0 0 0 20px;
+}
 footer{
   text-align:center;
   padding:18px;
