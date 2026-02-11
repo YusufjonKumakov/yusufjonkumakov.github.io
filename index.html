@@ -1,207 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Yusufjon Kumakov — Academic Profile</title>
+<meta name="description" content="Academic homepage of Yusufjon Kumakov — PhD Researcher in GeoEnergy Engineering at Heriot‑Watt University. 4D seismic inversion, machine learning, subsurface monitoring." />
+<meta name="color-scheme" content="light dark" />
 
-<!-- Google Fonts -->
+<!-- Inter font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    :root {
-        --bg: #f8f9fb;
-        --card: #ffffff;
-        --text: #1e293b;
-        --muted: #475569;
-        --accent: #2563eb;
-        --border: #e2e8f0;
+  :root{
+    --bg:#f6f7fb; --panel:#ffffff; --text:#0f172a; --muted:#475569;
+    --brand:#2563eb; --border:#e2e8f0; --ring:rgba(37,99,235,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f15; --panel:#11161d; --text:#e5e7eb; --muted:#9ca3af;
+      --brand:#60a5fa; --border:#1f2937; --ring:rgba(96,165,250,.22);
     }
-    * { box-sizing: border-box; }
-    body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-    }
-    header {
-        padding: 60px 20px;
-        text-align: center;
-        background: linear-gradient(135deg, rgba(37,99,235,0.10), transparent 70%);
-        border-bottom: 1px solid var(--border);
-    }
-    h1 {
-        font-size: 2.3rem;
-        margin: 0 0 10px;
-    }
-    h2 {
-        margin-top: 0;
-        font-size: 1.4rem;
-        color: var(--accent);
-    }
-    .muted {
-        color: var(--muted);
-    }
-    .container {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 0 20px;
-    }
-    .card {
-        background: var(--card);
-        padding: 24px;
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        margin-bottom: 20px;
-    }
-    ul { margin-top: 10px; }
-    li { margin-bottom: 4px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer {
-        text-align: center;
-        padding: 30px;
-        margin-top: 20px;
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-    }
+  }
+
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    background:var(--bg); color:var(--text); line-height:1.65;
+  }
+
+  /* Layout */
+  .wrap{display:grid; grid-template-columns: 300px 1fr; gap:22px; max-width:1200px; margin:24px auto; padding:0 16px;}
+  @media (max-width: 900px){ .wrap{grid-template-columns: 1fr; } }
+
+  /* Sidebar */
+  .sidebar{
+    position: sticky; top:16px;
+    background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px;
+    height:max-content;
+  }
+  .photo{
+    width:110px; height:110px; border-radius:50%; background:linear-gradient(135deg,#dbeafe,transparent);
+    border:1px solid var(--border); margin:4px auto 10px;
+    display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:600;
+  }
+  .name{font-size:1.3rem; font-weight:700; text-align:center; margin:6px 0 2px;}
+  .role{color:var(--muted); text-align:center; font-size:.95rem; margin-bottom:12px;}
+  nav a{
+    display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; color:var(--text);
+    text-decoration:none; border:1px solid var(--border); margin-bottom:8px; background:var(--panel);
+  }
+  nav a:hover, nav a.active{ box-shadow:0 0 0 5px var(--ring); text-decoration:none; }
+  .links{
+    margin-top:12px; display:grid; grid-template-columns:1fr; gap:8px;
+  }
+  .links a{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    text-decoration:none; color:var(--brand); border:1px dashed var(--border); padding:10px 12px; border-radius:999px;
+    background:transparent;
+  }
+  .links a:hover{ box-shadow:0 0 0 4px var(--ring); }
+
+  /* Main content */
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:22px; margin-bottom:18px;
+  }
+  h2{margin:0 0 10px; font-size:1.25rem; color:var(--brand)}
+  h3{margin:10px 0 6px; font-size:1.05rem}
+  p{margin:0 0 10px}
+  ul{margin:6px 0 0 18px}
+  li{margin:4px 0}
+  a{color:var(--brand); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .tag{display:inline-block; font-size:.85rem; color:var(--muted); border:1px dashed var(--border); border-radius:8px; padding:4px 8px; margin:4px 6px 0 0}
+
+  footer{ text-align:center; padding:22px 12px; color:var(--muted); }
+
+  /* Skip link for accessibility */
+  .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .skip:focus{position:static;width:auto;height:auto;background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px}
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Yusufjon Kumakov</h1>
-    <p class="muted">PhD Researcher • GeoEnergy Engineering • Heriot‑Watt University</p>
-    <p>
-        <a href="https://github.com/yusufjonkumakov" target="_blank">GitHub</a> •
-        <a href="https://www.linkedin.com/in/yusufjon-kumakov-a59a19194/" target="_blank">LinkedIn</a> •
-        <a href="mailto:yk4017@hw.ac.uk">Email</a>
-    </p>
-</header>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="container">
+<div class="wrap">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="photo" aria-hidden="true">Photo</div>
+    <div class="name">Yusufjon Kumakov</div>
+    <div class="role">PhD Researcher · GeoEnergy Engineering<br>Heriot‑Watt University</div>
 
+    <nav aria-label="Section navigation">
+      <a href="#about" class="active">About</a>
+      <a href="#education">Education</a>
+      <a href="#thesis">PhD Thesis</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="links" aria-label="Profile links">
+      <a href="https://github.com/yusufjonkumakov" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/yusufjon-kumakov-a59a19194/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:yk4017@hw.ac.uk">Email</a>
+      <a href="https://scholar.google.com/citations?user=XvHKT-oAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main id="main">
     <!-- About -->
-    <section class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a PhD student in GeoEnergy Engineering at Heriot-Watt University, focusing on 
-            <strong>4D seismic inversion</strong>, <strong>machine learning</strong>, and 
-            <strong>subsurface reservoir monitoring</strong>. My research aims to integrate 
-            geophysical and reservoir engineering constraints to improve inversion accuracy for 
-            hydrocarbon and CO₂ storage applications.
-        </p>
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>
+        I am a PhD student in GeoEnergy Engineering at Heriot‑Watt University, focusing on
+        <strong>4D seismic inversion</strong>, <strong>machine learning</strong>, and
+        <strong>subsurface reservoir monitoring</strong>. I integrate geophysical and reservoir
+        engineering constraints to improve inversion accuracy for hydrocarbon and CO₂ storage applications.
+      </p>
+      <div>
+        <span class="tag">4D seismic</span>
+        <span class="tag">Machine learning</span>
+        <span class="tag">Inversion</span>
+        <span class="tag">Reservoir monitoring</span>
+        <span class="tag">CO₂ storage</span>
+      </div>
     </section>
 
     <!-- Education -->
-    <section class="card">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>PhD, GeoEnergy Engineering</strong> — Heriot-Watt University (2025–2029)<br>
-                Thesis: <em>4D Seismic Inversion for Pressure and Saturation Using Machine Learning</em>
-            </li>
-            <li><strong>MSc, Petroleum & Mining Engineering</strong> — Polytechnic University of Turin (2021–2023)<br>
-                Thesis: Unsupervised Machine Learning for Salt Dome Identification & Seismic Enhancement
-            </li>
-            <li><strong>BSc, Petroleum Engineering</strong> — Gubkin Russian State University (2017–2021)</li>
-        </ul>
+    <section id="education" class="card" aria-labelledby="edu-title">
+      <h2 id="edu-title">Education</h2>
+      <ul>
+        <li><strong>PhD, GeoEnergy Engineering</strong> — Heriot‑Watt University, Edinburgh (09/2025–09/2029)<br>
+            Thesis: <em>4D Seismic Inversion for Pressure and Saturation Using Machine Learning</em></li>
+        <li><strong>MSc, Petroleum & Mining Engineering</strong> — Polytechnic University of Turin (10/2021–11/2023)<br>
+            Thesis: Unsupervised ML for Salt Dome Identification & Seismic Image Enhancement</li>
+        <li><strong>BSc, Petroleum Engineering</strong> — Branch of Gubkin Russian State University of Oil & Gas (09/2017–07/2021)</li>
+      </ul>
     </section>
 
-    <!-- PhD Thesis -->
-    <section class="card">
-        <h2>PhD Thesis</h2>
-        <p>
-            Research on applying machine learning for improved time-lapse (4D) seismic inversion 
-            of reservoir pressure and saturation. Focus areas include:
-        </p>
-        <ul>
-            <li>Data‑driven inversion workflows</li>
-            <li>Geophysical + reservoir constraints</li>
-            <li>Case studies from hydrocarbon & CO₂ fields</li>
-        </ul>
+    <!-- Thesis -->
+    <section id="thesis" class="card" aria-labelledby="thesis-title">
+      <h2 id="thesis-title">PhD Thesis</h2>
+      <p>
+        Research on time‑lapse (4D) seismic inversion of reservoir <em>pressure</em> and <em>saturation</em>
+        enhanced by machine learning, with geophysical and reservoir constraints and case studies from hydrocarbon
+        and CO₂ storage fields.
+      </p>
+      <ul>
+        <li>Data‑driven inversion workflows</li>
+        <li>Physics + data constraints</li>
+        <li>Validation on real field datasets</li>
+      </ul>
     </section>
 
-    <!-- Work Experience -->
-    <section class="card">
-        <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Doctoral Researcher</strong> — Heriot-Watt University (2025–Present)<br>
-                Seismic inversion, deep learning.
-            </li>
-            <li><strong>Chief Specialist, Geophysics</strong> — Yangi Kon Company (2025)<br>
-                Seismic interpretation, geological modeling.
-            </li>
-            <li><strong>Assistant Lecturer</strong> — Tashkent State Technical University (2024–2025)</li>
-            <li><strong>Junior Researcher</strong> — Institute of Geology & Exploration (2024)</li>
-            <li><strong>Intern</strong> — Ministry of Mining Industry & Geology (2021)</li>
-        </ul>
+    <!-- Experience -->
+    <section id="experience" class="card" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <ul>
+        <li><strong>Doctoral Researcher</strong> — Heriot‑Watt University, Edinburgh (09/2025–Present)<br>Seismic inversion; deep learning.</li>
+        <li><strong>Chief Specialist (Geophysics Dept.)</strong> — “Yangi kon” company, Tashkent (04/2025–10/2025)<br>Seismic interpretation; geologic body modelling.</li>
+        <li><strong>Assistant Lecturer</strong> — Tashkent State Technical University (10/2024–06/2025)<br>Oil & gas geology; reservoir engineering.</li>
+        <li><strong>Junior Researcher</strong> — Institute of Geology & Exploration (01/2024–10/2024)<br>Reserves estimation; Petrel modelling; production forecasting.</li>
+        <li><strong>Intern</strong> — Ministry of Mining Industry & Geology (08/2021–09/2021)</li>
+      </ul>
     </section>
 
     <!-- Publications -->
-    <section class="card">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>A Large-scale Benchmark on Geological Fault Delineation Models</strong><br>
-                IEEE Access — Co-author
-            </li>
-            <li><strong>CRACKS: Crowdsourcing Resources for Subsurface Faults</strong><br>
-                arXiv (2024)
-            </li>
-            <li><strong>Reservoir Characteristics of Jurassic Terrigenous Deposits</strong><br>
-                GEAM Journal
-            </li>
-            <li><strong>Comparative Analysis of Reserves Classification</strong><br>
-                Zenodo — Young Scholars Conference
-            </li>
-            <li><strong>Prospects for Machine Learning in Geophysics</strong><br>
-                Geologiya va Mineral Resurslar
-            </li>
-        </ul>
+    <section id="publications" class="card" aria-labelledby="pub-title">
+      <h2 id="pub-title">Publications (selected)</h2>
+      <ul>
+        <li><strong>A Large-scale Benchmark on Geological Fault Delineation Models: Domain Shift, Training Dynamics, Generalizability, Evaluation and Inferential Behavior</strong> — <em>IEEE Access</em> (co-author).</li>
+        <li><strong>CRACKS: Crowdsourcing Resources for Analysis and Categorization of Key Subsurface Faults</strong> — <em>arXiv</em> (2024).</li>
+        <li><strong>Reservoir Characteristics of Jurassic Terrigenous Deposits in the Kandym Uplift…</strong> — <em>GEAM Journal</em>.</li>
+        <li><strong>Comparative Analysis of Reserves Classification (UVS, PRMS-SPE, SEC)</strong> — <em>Zenodo</em>, Young Scholars conf.</li>
+        <li><strong>Prospects for the Development and Application of ML in Geophysics</strong> — <em>Geologiya va Mineral Resurslar</em>.</li>
+      </ul>
+      <p>Full list on <a href="https://scholar.google.com/citations?user=XvHKT-oAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </section>
 
     <!-- Conferences -->
-    <section class="card">
-        <h2>Conferences</h2>
-        <ul>
-            <li>Machine Learning for Seismic Images — UNG Conference (2024)</li>
-            <li>Gas Preparation Process Optimization — Oil & Gas 2020</li>
-            <li>Other scientific presentations (2018–2020)</li>
-        </ul>
+    <section id="conferences" class="card" aria-labelledby="conf-title">
+      <h2 id="conf-title">Conferences</h2>
+      <ul>
+        <li>Machine Learning for Seismic Images — Uzbekneftegaz International Scientific & Practical Conf. (2024)</li>
+        <li>Optimization of Gas Preparation Process for Transportation — Oil & Gas (2020)</li>
+        <li>Additional student scientific presentations (2018–2020)</li>
+      </ul>
     </section>
 
     <!-- Skills -->
-    <section class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming:</strong> Python, MATLAB, TensorFlow</li>
-            <li><strong>Geoscience Tools:</strong> Petrel, seismic interpretation, wave propagation</li>
-            <li><strong>Data Skills:</strong> ML, DL, data analysis, denoising</li>
-            <li><strong>Languages:</strong> Uzbek (native), English (fluent), Russian (fluent), Italian (basic)</li>
-        </ul>
+    <section id="skills" class="card" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul>
+        <li><strong>Computational:</strong> Python, MATLAB, TensorFlow, ML/DL, data analysis</li>
+        <li><strong>Geoscience:</strong> Petrel, seismic interpretation, wave propagation, denoising, reservoir engineering, well logging, core analysis, well testing, reserves estimation, production forecasting</li>
+        <li><strong>Languages:</strong> Uzbek (native), English (fluent), Russian (fluent), Italian (basic)</li>
+      </ul>
     </section>
 
     <!-- Contact -->
-    <section class="card">
-        <h2>Contact</h2>
-        <p>
-            📧 <a href="mailto:yk4017@hw.ac.uk">yk4017@hw.ac.uk</a><br>
-            📍 Edinburgh, Scotland<br>
-            🔗 <a href="https://github.com/yusufjonkumakov" target="_blank">GitHub</a> —
-            <a href="https://www.linkedin.com/in/yusufjon-kumakov-a59a19194/" target="_blank">LinkedIn</a>
-        </p>
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        <strong>Email:</strong> <a href="mailto:yk4017@hw.ac.uk">yk4017@hw.ac.uk</a><br>
+        <strong>Location:</strong> Edinburgh, Scotland, UK
+      </p>
+      <p>
+        <a href="https://github.com/yusufjonkumakov" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/yusufjon-kumakov-a59a19194/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://scholar.google.com/citations?user=XvHKT-oAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </p>
     </section>
-
+  </main>
 </div>
 
 <footer>
-    © <span id="year"></span> Yusufjon Kumakov — All Rights Reserved
+  © <span id="year"></span> Yusufjon Kumakov — All rights reserved
 </footer>
 
 <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  // Current year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Smooth nav + active state
+  const navLinks = document.querySelectorAll('nav a');
+  const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href')));
+  const activate = (id) => {
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+  };
+  const onScroll = () => {
+    let current = sections[0].id;
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top <= 120) current = sec.id;
+    });
+    activate(current);
+  };
+  document.addEventListener('scroll', onScroll, {passive:true});
+</script>
 </body>
 </html>
