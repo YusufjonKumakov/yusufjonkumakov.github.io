@@ -1,87 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Home — Yusufjon Kumakov</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
+/* ===== TRUE BLACK PALETTE ===== */
+:root{
+  --bg: #000000;        /* full black background */
+  --panel: #0b0b0b;     /* cards/nav black */
+  --panel-2: #0f0f0f;   /* hero black */
+  --text: #eaeaea;      /* light grey text */
+  --muted: #b5b5b5;     /* muted text */
+  --accent-1: #00d8ff;  /* cyan accent */
+  --accent-2: #9b5cff;  /* purple accent */
+  --accent-3: #00e5ff;  /* brighter cyan */
+  --accent-4: #b497ff;  /* lighter purple */
+  --border: #1a1a1a;    /* subtle borders */
+  --ring: rgba(155, 92, 255, 0.25); /* focus glow */
+  --gold: #ffcc4d;      /* nav active underline */
+}
 
-<body>
-
-<header class="site-header">
-  <div class="wrap">
-    <strong>Yusufjon Kumakov</strong>
-    <nav class="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="publication.html">Publication</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <h1>PhD Researcher · GeoEnergy Engineering</h1>
-    <p class="subtitle">Heriot‑Watt University · Edinburgh, UK</p>
-  </div>
-</section>
-
-<main class="container">
-
-  <section class="card">
-    <h2>About</h2>
-    <p>
-      I am a PhD Researcher at Heriot-Watt University specialising in 
-      <strong>4D seismic inversion</strong>, <strong>machine learning</strong>, 
-      and <strong>subsurface reservoir monitoring</strong>. My background 
-      spans geophysics, reservoir engineering, and deep learning, with 
-      industry experience in seismic interpretation and hydrocarbon 
-      reserves analysis.
-    </p>
-
-    <p>
-      I am passionate about integrating physics-based methods with 
-      modern AI/ML to improve time‑lapse (4D) seismic inversion for 
-      CO₂ storage and hydrocarbon fields.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Education</h2>
-    <ul>
-      <li>PhD, GeoEnergy Engineering — Heriot-Watt University</li>
-      <li>MSc, Petroleum & Mining Engineering — Polytechnic University of Turin</li>
-      <li>BSc, Petroleum Engineering — Gubkin University</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Experience</h2>
-    <ul>
-      <li>Doctoral Researcher — Heriot‑Watt University</li>
-      <li>Chief Specialist (Geophysics) — Yangi Kon</li>
-      <li>Assistant Lecturer — TSTU</li>
-      <li>Junior Researcher — Institute of Geology</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, MATLAB, TensorFlow, NumPy, SciPy</li>
-      <li><strong>Machine Learning:</strong> Deep Learning, Image Processing, Denoising, Inversion ML</li>
-      <li><strong>Geoscience Tools:</strong> Petrel, Seismic Interpretation, Reservoir Modeling</li>
-      <li><strong>Data Skills:</strong> Data Analysis, Feature Engineering, Visualization</li>
-      <li><strong>Domain Expertise:</strong> 4D Seismic, CO₂ Storage Monitoring, Reservoir Engineering</li>
-      <li><strong>Languages:</strong> Uzbek (native), English (fluent), Russian (fluent), Italian (basic)</li>
-    </ul>
-  </section>
-  
-</main>
-
-<footer>© 2026 Yusufjon Kumakov</footer>
-
-</body>
-</html>
-
-
+/* Optional light mode (auto) — keeps black bias but readable */
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg: #0a0a0a;
+    --panel: #111111;
+    --panel-2: #151515;
+    --text: #f2f2f2;
+    --muted: #c8c8c8;
+    --accent-1: #00d8ff;
+    --accent-2: #9b5cff;
+    --accent-3: #18e0ff;
+    --accent-4: #bda4ff;
+    --border: #1d1d1d;
+    --ring: rgba(0, 216, 255, 0.25);
+    --gold: #ffcc4d;
+  }
+}
