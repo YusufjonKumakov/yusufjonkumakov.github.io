@@ -6,17 +6,16 @@
   <title>Home — Yusufjon Kumakov</title>
   <meta name="description" content="PhD Researcher in GeoEnergy Engineering. 4D seismic inversion, machine learning, and subsurface reservoir monitoring." />
   <meta name="color-scheme" content="dark light" />
-  <!-- Shared stylesheet -->
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ===== Header / Navigation ===== -->
+  <!-- Header / Navigation -->
   <header class="site-header">
     <div class="wrap">
-      <a href="index.html" class="brand" aria-label="Home">
-        <!-- Small logo block; you can swap to a tiny photo if you prefer -->
+      <a class="brand" href="index.html" aria-label="Home">
         <div class="logo" aria-hidden="true"></div>
         <span>Yusufjon&nbsp;Kumakov</span>
       </a>
@@ -30,10 +29,9 @@
     </div>
   </header>
 
-  <!-- ===== Hero (with photo) ===== -->
+  <!-- Hero with photo -->
   <section class="hero">
     <div class="hero-inner" style="display:grid; grid-template-columns: 130px 1fr; gap: 20px; align-items:center;">
-      <!-- Profile photo (make sure assets/profile.jpg exists) -->
       <div
         class="avatar"
         role="img"
@@ -47,20 +45,14 @@
       </div>
 
       <div>
-        <h1 style="
-          margin:0 0 6px;
-          font-size: clamp(1.6rem, 3vw, 2.3rem);
-          background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-          -webkit-background-clip: text; background-clip: text; color: transparent;">
-          PhD Researcher — GeoEnergy Engineering
-        </h1>
-        <p class="subtitle" style="margin:0">Heriot‑Watt University · Edinburgh, UK</p>
+        <h1>PhD Researcher — GeoEnergy Engineering</h1>
+        <p class="subtitle">Heriot‑Watt University · Edinburgh, UK</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Main Content ===== -->
-  <main class="container" role="main">
+  <!-- Main -->
+  <main id="main" class="container" role="main">
 
     <!-- About -->
     <section class="card" aria-labelledby="about">
@@ -69,14 +61,13 @@
         I am a Postgraduate Research Student (PhD) in <strong>GeoEnergy Engineering</strong> at
         <strong>Heriot‑Watt University</strong>, specialising in <strong>4D seismic inversion</strong>,
         <strong>machine learning</strong>, and <strong>subsurface reservoir monitoring</strong>.
-        My work combines physics‑based geophysical theory with modern data‑driven approaches to improve
-        time‑lapse (4D) seismic interpretation for hydrocarbon reservoirs and CO₂ storage sites.
+        I integrate physics‑based geophysical methods with modern data‑driven approaches to improve
+        4D seismic interpretation for hydrocarbon reservoirs and CO₂ storage sites.
       </p>
       <p>
-        I have experience as a <strong>Chief Geophysics Specialist</strong>, <strong>Assistant Lecturer</strong>, and
-        <strong>Junior Researcher</strong>, contributing to real‑world geophysical studies, reservoir modelling,
-        and subsurface uncertainty analysis. I aim to build reliable, reproducible ML‑augmented inversion
-        workflows that deliver decision‑grade subsurface insights.
+        My background covers seismic interpretation, inversion workflow design, reservoir modelling,
+        and ML/DL for geoscience. I focus on building reliable, reproducible pipelines that deliver
+        decision‑grade subsurface insights.
       </p>
     </section>
 
@@ -104,7 +95,7 @@
       <ul>
         <li>
           <strong>Doctoral Researcher</strong> — Heriot‑Watt University (2025–Present)<br />
-          Time‑lapse seismic analysis · ML/DL modelling · Pressure/saturation estimation
+          Time‑lapse seismic analysis · ML/DL modelling · Pressure/Saturation estimation
         </li>
         <li>
           <strong>Chief Specialist, Geophysics Department</strong> — “Yangi kon” (2025)<br />
@@ -121,7 +112,7 @@
       </ul>
     </section>
 
-    <!-- Skills (as an extension of experience, with colorful chips) -->
+    <!-- Skills (experience style + chips) -->
     <section class="card" aria-labelledby="skills">
       <h2 id="skills"><span class="grad">Skills</span></h2>
 
@@ -146,13 +137,13 @@
 
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    © <span id="year"></span> Yusufjon Kumakov
-  </footer>
+  <footer>© <span id="year"></span> Yusufjon Kumakov</footer>
 
-  <!-- ===== Small scripts ===== -->
+  <!-- Small scripts -->
   <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     // Auto-highlight current nav item
     (function(){
       const page = location.pathname.split('/').pop() || 'index.html';
@@ -160,10 +151,6 @@
         if(a.getAttribute('href') === page) a.classList.add('active');
       });
     })();
-
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
