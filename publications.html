@@ -1,59 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publication — Yusufjon Kumakov</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <strong>Yusufjon Kumakov</strong>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="publication.html" class="active">Publication</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Yusufjon&nbsp;Kumakov</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="publication.html">Publication</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <h1>Publications & Conferences</h1>
-    <p class="subtitle">Peer-reviewed publications and academic contributions</p>
-  </div>
-</section>
-
-<main class="container">
-
-  <section class="card">
-    <h2>Publications</h2>
-    <ul>
-      <li><strong>Geological Fault Delineation Models</strong> — IEEE Access</li>
-      <li><strong>CRACKS: Subsurface Faults Dataset</strong> — arXiv</li>
-      <li><strong>Jurassic Terrigenous Deposits</strong> — GEAM Journal</li>
-      <li><strong>Reserve Classification Analysis</strong> — Young Scholars Conference</li>
-      <li><strong>Machine Learning in Geophysics</strong> — GVMR</li>
-    </ul>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Publications & Conferences</h1>
+      <p class="subtitle">Peer‑reviewed publications and academic contributions</p>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>Conferences</h2>
-    <ul>
-      <li>ML for Seismic Images — UNG 2024</li>
-      <li>Gas Preparation Optimization — Oil & Gas 2020</li>
-      <li>Inter‑fracturing Using Soluble Balls — 2020</li>
-      <li>Acid Processing of High‑Viscosity Oil — 2018</li>
-      <li>Corrosion Inhibitors — 2018</li>
-      <li>Biopolymer Drilling Fluid — Student Conference</li>
-    </ul>
-  </section>
+  <main id="main" class="container">
+    <section class="card" aria-labelledby="pubs">
+      <h2 id="pubs"><span class="grad">Publications</span></h2>
+      <ul>
+        <li><strong>A Large‑scale Benchmark on Geological Fault Delineation Models</strong> — <em>IEEE Access</em>. (Co‑author)</li>
+        <li><strong>CRACKS: Crowdsourcing Resources for Key Subsurface Faults</strong> — <em>arXiv:2408.11185</em>.</li>
+        <li><strong>Reservoir Characteristics of Jurassic Terrigenous Deposits (Kandym Uplift)</strong> — <em>GEAM Journal</em>.</li>
+        <li><strong>Comparative Analysis of HC Reserve Classifications (UVS, PRMS‑SPE, SEC)</strong> — <em>Young Scholars Conference</em>.</li>
+        <li><strong>Prospects for ML in Geophysics</strong> — <em>Geologiya va Mineral Resurslar</em>.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        Full list on <a href="https://scholar.google.com/citations?user=XvHKT-oAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+    </section>
 
-</main>
+    <section class="card" aria-labelledby="conf">
+      <h2 id="conf"><span class="grad">Conferences</span></h2>
+      <ul>
+        <li><strong>Machine Learning for Seismic Images</strong> — Uzbekneftegaz International Scientific & Practical Conference (2024)</li>
+        <li><strong>Optimization of Gas Preparation Process for Transportation</strong> — Oil & Gas Conference (2020)</li>
+        <li><strong>Inter‑fracturing Using Soluble Balls as Flow Deflectors</strong> — Oil & Gas Conference (2020)</li>
+        <li><strong>Acid Processing of High‑Viscosity Oil</strong> — Oil & Gas Conference (2018)</li>
+        <li><strong>Corrosion Inhibitors in Acid Processing</strong> — Oil & Gas Conference (2018)</li>
+        <li><strong>Biopolymer Drilling Fluid</strong> — Student Scientific Conference</li>
+      </ul>
+    </section>
+  </main>
 
-<footer>© 2026 Yusufjon Kumakov</footer>
+  <footer>© <span id="year"></span> Yusufjon Kumakov</footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const page = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav a').forEach(a=>{
+        if(a.getAttribute('href') === page) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
