@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Yusufjon Kumakov</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <strong>Yusufjon Kumakov</strong>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="publication.html">Publication</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Yusufjon&nbsp;Kumakov</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="publication.html">Publication</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <h1>Contact</h1>
-    <p class="subtitle">Feel free to reach out</p>
-  </div>
-</section>
-
-<main class="container">
-
-  <section class="card">
-    <h2>Email</h2>
-    <p>yk4017@hw.ac.uk</p>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Contact</h1>
+      <p class="subtitle">Let’s connect — collaborations, opportunities, or questions</p>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>Links</h2>
-    <ul>
-      <li>GitHub: github.com/yusufjonkumakov</li>
-      <li>LinkedIn: linkedin.com/in/yusufjon-kumakov-a59a19194</li>
-      <li>Google Scholar: scholar.google.com/citations?user=XvHKT-oAAAAJ</li>
-    </ul>
-  </section>
+  <main id="main" class="container">
+    <section class="card" aria-labelledby="details">
+      <h2 id="details"><span class="grad">Details</span></h2>
+      <p><strong>Email:</strong> <a href="mailto:yk4017@hw.ac.uk">yk4017@hw.ac.uk</a></p>
+      <p><strong>Location:</strong> Edinburgh, Scotland, UK</p>
+    </section>
 
-</main>
+    <section class="card" aria-labelledby="links">
+      <h2 id="links"><span class="grad">Links</span></h2>
+      <ul>
+        <li>GitHub: <a href="https://github.com/yusufjonkumakov" target="_blank" rel="noopener">github.com/yusufjonkumakov</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/yusufjon-kumakov-a59a19194/" target="_blank" rel="noopener">linkedin.com/in/yusufjon-kumakov-a59a19194</a></li>
+        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=XvHKT-oAAAAJ" target="_blank" rel="noopener">scholar.google.com/citations?user=XvHKT-oAAAAJ</a></li>
+      </ul>
+    </section>
+  </main>
 
-<footer>© 2026 Yusufjon Kumakov</footer>
+  <footer>© <span id="year"></span> Yusufjon Kumakov</footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const page = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav a').forEach(a=>{
+        if(a.getAttribute('href') === page) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
