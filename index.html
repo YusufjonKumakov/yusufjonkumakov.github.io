@@ -1,33 +1,169 @@
-/* ===== TRUE BLACK PALETTE ===== */
-:root{
-  --bg: #000000;        /* full black background */
-  --panel: #0b0b0b;     /* cards/nav black */
-  --panel-2: #0f0f0f;   /* hero black */
-  --text: #eaeaea;      /* light grey text */
-  --muted: #b5b5b5;     /* muted text */
-  --accent-1: #00d8ff;  /* cyan accent */
-  --accent-2: #9b5cff;  /* purple accent */
-  --accent-3: #00e5ff;  /* brighter cyan */
-  --accent-4: #b497ff;  /* lighter purple */
-  --border: #1a1a1a;    /* subtle borders */
-  --ring: rgba(155, 92, 255, 0.25); /* focus glow */
-  --gold: #ffcc4d;      /* nav active underline */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — Yusufjon Kumakov</title>
+  <meta name="description" content="PhD Researcher in GeoEnergy Engineering. 4D seismic inversion, machine learning, and subsurface reservoir monitoring." />
+  <meta name="color-scheme" content="dark light" />
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
 
-/* Optional light mode (auto) — keeps black bias but readable */
-@media (prefers-color-scheme: light) {
-  :root{
-    --bg: #0a0a0a;
-    --panel: #111111;
-    --panel-2: #151515;
-    --text: #f2f2f2;
-    --muted: #c8c8c8;
-    --accent-1: #00d8ff;
-    --accent-2: #9b5cff;
-    --accent-3: #18e0ff;
-    --accent-4: #bda4ff;
-    --border: #1d1d1d;
-    --ring: rgba(0, 216, 255, 0.25);
-    --gold: #ffcc4d;
-  }
-}
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="brand" aria-label="Home">
+        <!-- Small logo block; you can swap to a tiny photo if you prefer -->
+        <div class="logo" aria-hidden="true"></div>
+        <span>Yusufjon&nbsp;Kumakov</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="publication.html">Publication</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero (with photo) ===== -->
+  <section class="hero">
+    <div class="hero-inner" style="display:grid; grid-template-columns: 130px 1fr; gap: 20px; align-items:center;">
+      <!-- Profile photo (make sure assets/profile.jpg exists) -->
+      <div
+        class="avatar"
+        role="img"
+        aria-label="Profile photo of Yusufjon Kumakov"
+        style="
+          width:120px; height:120px; border-radius:50%;
+          background: url('assets/profile.jpg') center/cover no-repeat, linear-gradient(135deg,#222,#111);
+          border: 2px solid var(--border);
+          box-shadow: 0 8px 28px rgba(0,0,0,.35), 0 0 0 4px rgba(255,255,255,.02);
+        ">
+      </div>
+
+      <div>
+        <h1 style="
+          margin:0 0 6px;
+          font-size: clamp(1.6rem, 3vw, 2.3rem);
+          background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+          -webkit-background-clip: text; background-clip: text; color: transparent;">
+          PhD Researcher — GeoEnergy Engineering
+        </h1>
+        <p class="subtitle" style="margin:0">Heriot‑Watt University · Edinburgh, UK</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container" role="main">
+
+    <!-- About -->
+    <section class="card" aria-labelledby="about">
+      <h2 id="about"><span class="grad">About</span></h2>
+      <p>
+        I am a Postgraduate Research Student (PhD) in <strong>GeoEnergy Engineering</strong> at
+        <strong>Heriot‑Watt University</strong>, specialising in <strong>4D seismic inversion</strong>,
+        <strong>machine learning</strong>, and <strong>subsurface reservoir monitoring</strong>.
+        My work combines physics‑based geophysical theory with modern data‑driven approaches to improve
+        time‑lapse (4D) seismic interpretation for hydrocarbon reservoirs and CO₂ storage sites.
+      </p>
+      <p>
+        I have experience as a <strong>Chief Geophysics Specialist</strong>, <strong>Assistant Lecturer</strong>, and
+        <strong>Junior Researcher</strong>, contributing to real‑world geophysical studies, reservoir modelling,
+        and subsurface uncertainty analysis. I aim to build reliable, reproducible ML‑augmented inversion
+        workflows that deliver decision‑grade subsurface insights.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="card" aria-labelledby="education">
+      <h2 id="education"><span class="grad">Education</span></h2>
+      <ul>
+        <li>
+          <strong>PhD, GeoEnergy Engineering</strong> — Heriot‑Watt University (2025–2029)<br />
+          Research: 4D Seismic Inversion, Reservoir Monitoring, ML for Geoscience
+        </li>
+        <li>
+          <strong>MSc, Petroleum &amp; Mining Engineering</strong> — Polytechnic University of Turin (2021–2023)<br />
+          Thesis: Unsupervised ML for Salt Dome Identification &amp; Seismic Image Enhancement
+        </li>
+        <li>
+          <strong>BSc, Petroleum Engineering</strong> — Gubkin Russian State University (Branch) (2017–2021)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="card" aria-labelledby="experience">
+      <h2 id="experience"><span class="grad">Experience</span></h2>
+      <ul>
+        <li>
+          <strong>Doctoral Researcher</strong> — Heriot‑Watt University (2025–Present)<br />
+          Time‑lapse seismic analysis · ML/DL modelling · Pressure/saturation estimation
+        </li>
+        <li>
+          <strong>Chief Specialist, Geophysics Department</strong> — “Yangi kon” (2025)<br />
+          Seismic interpretation · Geological body modelling · Reservoir analysis
+        </li>
+        <li>
+          <strong>Assistant Lecturer</strong> — Tashkent State Technical University (2024–2025)<br />
+          Teaching geophysics · Reservoir engineering · Petroleum geology
+        </li>
+        <li>
+          <strong>Junior Researcher</strong> — Institute of Geology &amp; Exploration (2024)<br />
+          Reserves estimation · Petrel modelling · Production forecasting
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills (as an extension of experience, with colorful chips) -->
+    <section class="card" aria-labelledby="skills">
+      <h2 id="skills"><span class="grad">Skills</span></h2>
+
+      <ul style="margin-bottom: 10px;">
+        <li><strong>Computational:</strong> Python, MATLAB, TensorFlow, NumPy, SciPy, ML/DL, data analysis.</li>
+        <li><strong>Geoscience &amp; Reservoir:</strong> 4D seismic interpretation &amp; inversion, denoising, reservoir engineering, reserves estimation, production forecasting.</li>
+        <li><strong>Tools:</strong> Petrel, seismic attribute workflows, well logging &amp; geomodelling tools.</li>
+        <li><strong>Professional:</strong> Research writing, academic presentations, analytical reporting, cross‑disciplinary collaboration.</li>
+        <li><strong>Languages:</strong> Uzbek (native), English (fluent), Russian (fluent), Italian (basic).</li>
+      </ul>
+
+      <div class="chips" aria-label="Highlighted skills">
+        <span class="chip">4D Seismic</span>
+        <span class="chip">Inversion</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">Petrel</span>
+        <span class="chip">Reservoir Monitoring</span>
+        <span class="chip">CO₂ Storage</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © <span id="year"></span> Yusufjon Kumakov
+  </footer>
+
+  <!-- ===== Small scripts ===== -->
+  <script>
+    // Auto-highlight current nav item
+    (function(){
+      const page = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav a').forEach(a=>{
+        if(a.getAttribute('href') === page) a.classList.add('active');
+      });
+    })();
+
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
